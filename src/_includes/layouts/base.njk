@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Travis Spencer — Technologist, Executive, and Architect specializing in identity-driven systems, IAM, and API security.">
+  <title>{% if title %}{{ title }} · {% endif %}Travis Spencer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="min-h-screen">
+  <header class="sticky top-0 z-50 border-b border-border bg-surface/95 backdrop-blur-sm">
+    <nav class="mx-auto flex max-w-3xl flex-col gap-4 px-6 py-5 sm:flex-row sm:items-center sm:justify-between" aria-label="Primary">
+      <a href="#about" class="text-xl font-mono font-bold tracking-tight text-ink transition-colors hover:text-muted">$ cd</a>
+      <ul class="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm font-medium text-muted">
+        <li><a href="#achievements" class="transition-colors hover:text-ink">Achievements</a></li>
+        <li><a href="#speaking" class="transition-colors hover:text-ink">Speaking</a></li>
+        <li><a href="#publications" class="transition-colors hover:text-ink">Publications</a></li>
+        <li><a href="#contact" class="transition-colors hover:text-ink">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    {{ content | safe }}
+  </main>
+
+  <footer class="border-t border-border">
+    <div class="mx-auto max-w-3xl px-6 py-10">
+      <p class="text-sm text-muted">&copy; {{ "" | currentYear }} Travis Spencer</p>
+    </div>
+  </footer>
+</body>
+</html>
