@@ -7,7 +7,7 @@
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace
 }
 
-#about > div > p {
+/*#about > div > p {
   font-size: 1rem;
   color: rgba(15, 20, 25, 0.9);
   max-width: 42rem;
@@ -16,7 +16,7 @@
 
 #about > div > p:last-of-type {
   margin-bottom: 3rem
-}
+}*/
 
 @media (min-width: 768px) {
   #about > div > p { font-size: 1.125rem }
@@ -55,7 +55,7 @@ footer > div {
   padding: 0 1.5rem
 }
 
-section > div > p:first-of-type {
+/*section > div > p:first-of-type {
   font-size: 1rem;
   color: rgba(15, 20, 25, 0.9);
   max-width: 42rem;
@@ -65,10 +65,28 @@ section > div > p:first-of-type {
 @media (min-width: 768px) {
   section > div > p:first-of-type { font-size: 1.125rem }
 }
+*/
+/* Styles ALL intro paragraphs across all sections */
+section > div > p {
+  font-size: 1rem;
+  color: rgb(from var(--color-ink) r g b / 90%);
+  max-width: 42rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Adds the big gap only after the final intro paragraph before a list or the end of a section */
+section > div > p:last-of-type {
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+  section > div > p { font-size: 1.125rem; }
+}
 
 section {
+  scroll-margin-top: 5rem;
   border-bottom: 1px solid var(--color-border);
-  padding: 6rem 0
+  padding: 4rem 0
 }
 
 @media (min-width: 768px) {
@@ -80,13 +98,14 @@ header {
   top: 0;
   z-index: 50;
   border-bottom: 1px solid var(--color-border);
-  background-color: rgba(248, 247, 244, 0.95);
+  background-color: rgb(from var(--color-surface) r g b / 95%);
   backdrop-filter: blur(8px)
 }
 
 nav {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   gap: 1rem;
   padding: 1.25rem 0
 }
@@ -153,14 +172,13 @@ h2 {
 
 h3, dt {
   font-size: 1rem;
-  font-weight: 600;
-  color: var(--color-ink)
+  font-weight: 600
 }
 
 p, dd {
   margin-top: 0.5rem;
   font-size: 1rem;
-  color: rgba(15, 20, 25, 0.85)
+  color: rgb(from var(--color-ink) r g b / 85%)
 }
 
 .sub-section {
@@ -169,17 +187,14 @@ p, dd {
   padding-top: 3rem
 }
 
-.sub-section h3.label {
-  font-size: 0.875rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--color-muted);
+.sub-section h3 {
+  font-size: 1.1rem;
   margin-bottom: 1.5rem
 }
 
 .education-list li {
   margin-bottom: 0.75rem;
-  color: rgba(15, 20, 25, 0.9)
+  color: rgb(from var(--color-ink) r g b / 85%)
 }
 
 .social-links {
@@ -193,7 +208,7 @@ p, dd {
   font-size: 0.875rem;
   font-weight: 500;
   color: var(--color-ink);
-  border-bottom: 1px solid rgba(15, 20, 25, 0.2);
+  border-bottom: 1px solid rgb(from var(--color-ink) r g b / 20%);
   padding-bottom: 0.125rem
 }
 
@@ -201,7 +216,7 @@ p, dd {
 
 dd a {
   text-decoration: underline;
-  text-decoration-color: rgba(15, 20, 25, 0.3);
+  text-decoration-color: rgb(from var(--color-ink) r g b / 30%);
   text-underline-offset: 4px
 }
 
