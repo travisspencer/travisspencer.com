@@ -7,6 +7,21 @@
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace
 }
 
+#about > div > p {
+  font-size: 1rem;
+  color: rgba(15, 20, 25, 0.9);
+  max-width: 42rem;
+  margin-bottom: 1.5rem
+}
+
+#about > div > p:last-of-type {
+  margin-bottom: 3rem
+}
+
+@media (min-width: 768px) {
+  #about > div > p { font-size: 1.125rem }
+}
+
 * { box-sizing: border-box }
   
 html { scroll-behavior: smooth }
