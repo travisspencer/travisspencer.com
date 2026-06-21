@@ -7,19 +7,26 @@
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace
 }
 
-/*#about > div > p {
-  font-size: 1rem;
-  color: rgba(15, 20, 25, 0.9);
-  max-width: 42rem;
-  margin-bottom: 1.5rem
+#about > div { display: flow-root }
+
+#about h1 { margin-bottom: 2rem }
+
+#about img {
+  width: 100%;
+  max-width: 24rem;
+  height: auto;
+  margin: 0 auto 2rem auto;
+  display: block;
+  border-radius: 4px;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)
 }
 
-#about > div > p:last-of-type {
-  margin-bottom: 3rem
-}*/
-
 @media (min-width: 768px) {
-  #about > div > p { font-size: 1.125rem }
+  #about img {
+    float: left;
+    max-width: 18rem;
+    margin: 0.5rem 2rem 1rem 0
+  }
 }
 
 * { box-sizing: border-box }
@@ -55,18 +62,6 @@ footer > div {
   padding: 0 1.5rem
 }
 
-/*section > div > p:first-of-type {
-  font-size: 1rem;
-  color: rgba(15, 20, 25, 0.9);
-  max-width: 42rem;
-  margin-bottom: 3rem
-}
-
-@media (min-width: 768px) {
-  section > div > p:first-of-type { font-size: 1.125rem }
-}
-*/
-/* Styles ALL intro paragraphs across all sections */
 section > div > p {
   font-size: 1rem;
   color: rgb(from var(--color-ink) r g b / 90%);

@@ -4,7 +4,8 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addWatchTarget("./src/css/");
   eleventyConfig.addPassthroughCopy({
-    "./src/css/input.css": "css/style.css"
+    "./src/css/input.css": "css/style.css",
+    "./me.jpg": "me.jpg"
   });
 
   return {
