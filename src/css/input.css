@@ -7,6 +7,12 @@
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace
 }
 
+#about { padding-top: 1.5rem }
+
+@media (min-width: 768px) {
+  #about { padding-top: 8rem }
+}
+
 #about > div { display: flow-root }
 
 #about h1 { margin-bottom: 2rem }
