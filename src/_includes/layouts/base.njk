@@ -11,11 +11,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.css">
 </head>
-<body>
+<body>  
   <header>
     <div>
+      <a href="#" id="scroll-home-btn" aria-label="Back to top">
+        <img src="/me.jpg" alt="Travis Spencer">
+      </a>
       <nav aria-label="Primary">
-        <a href="#" id="nav-logo">$ cd</a>
         <ul>
           <li><a href="#achievements">Achievements</a></li>
           <li><a href="#speaking">Speaking</a></li>
@@ -29,5 +31,34 @@
   <main>
     {{ content | safe }}
   </main>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const heroPhoto = document.querySelector("#hero-photo"); 
+      const homeBtn = document.querySelector("#scroll-home-btn");
+      const header = document.querySelector("header"); // 1. Grab the header element
+
+      if (heroPhoto && homeBtn && header) {
+        // 2. Measure the exact pixel height of the header right now
+        const headerHeight = header.offsetHeight; 
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) {
+              homeBtn.classList.add("visible");
+            } else {
+              homeBtn.classList.remove("visible");
+            }
+          });
+        }, {
+          root: null,
+          threshold: 0,
+          // 3. Dynamically inject that exact height as a negative margin
+          rootMargin: `-${headerHeight}px 0px 0px 0px` 
+        });
+
+        observer.observe(heroPhoto);
+      }
+    });
+  </script>
 </body>
 </html>
