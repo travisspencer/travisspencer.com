@@ -200,8 +200,6 @@ p, dd {
 }
 
 .social-links a {
-  font-size: 0.875rem;
-  font-weight: 500;
   color: var(--color-ink);
   border-bottom: 1px solid rgb(from var(--color-ink) r g b / 20%);
   padding-bottom: 0.125rem
